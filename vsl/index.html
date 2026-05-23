@@ -634,6 +634,10 @@
       // ===== Mecanismo 4: teto de segurança =====
       setTimeout(function(){ revealPostPitch('safety-timeout'); }, SAFETY_MAX_DELAY_MS);
 
+      // ===== Modo PREVIEW (revisão) — ?preview=1 ou ?reveal=1 revela tudo na hora =====
+      // Em produção (sem o parâmetro) o pós-pitch só aparece via player VTurb (comportamento normal).
+      if(/[?&](preview|reveal)=1/i.test(location.search)){ revealPostPitch('preview-param'); }
+
       // Debug manual no console: window.__revealPitch()
       window.__revealPitch=function(){ revealPostPitch('manual'); };
     })();
