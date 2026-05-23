@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mince Pour la Vie — Santé</title>
+  <meta name="description" content="Des chercheurs de l'Institut Pasteur ont découvert une astuce maison de 2 minutes qui fait fondre jusqu'à 16 kilos chez des femmes de plus de 35 ans.">
+
+  <!-- ============================================================
+       PIXEL META (Facebook/Instagram Ads)
+       TODO: substituir PIXEL_META_ID pelo ID real — task ClickUp "Criar pixel - mince-pour-la-vie"
+       ============================================================ -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','PIXEL_META_ID');/* TODO: substituir PIXEL_META_ID */
+    fbq('track','PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=PIXEL_META_ID&ev=PageView&noscript=1"/></noscript>
+  <!-- Token API do Pixel Meta NÃO vai aqui — configurar server-side no dashboard UTMify (Conversions API) -->
+
+  <!-- VTurb Preload — fetchpriority high para performance mobile-first -->
+  <!-- TODO: substituir vid-PLACEHOLDER pelo ID real do A/B test VTurb quando disponível -->
+  <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+  <link rel="preload" href="https://scripts.converteai.net/00c3b583-8874-4e64-a32e-65f6dd9ba521/ab-test/vid-PLACEHOLDER/player.js" as="script" fetchpriority="high">
+
+  <!-- DNS-prefetch domínios críticos -->
+  <link rel="dns-prefetch" href="https://cdn.converteai.net">
+  <link rel="dns-prefetch" href="https://scripts.converteai.net">
+  <link rel="dns-prefetch" href="https://images.converteai.net">
+  <link rel="dns-prefetch" href="https://m3u8.vturb.net">
+  <link rel="dns-prefetch" href="https://api.vturb.com.br">
+  <link rel="dns-prefetch" href="https://cdn.utmify.com.br">
+  <link rel="dns-prefetch" href="https://connect.facebook.net">
+
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    body{background:#fff;min-height:100vh;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#222;-webkit-font-smoothing:antialiased}
+    [hidden]{display:none!important}
+
+    /* ===== DOBRA 1 — FUNDO BRANCO (pré-pitch, sempre visível) ===== */
+    .fold-white{background:#fff;color:#222}
+
+    /* Top bar */
+    .top-bar{background:#c62828;padding:10px 16px 0;text-align:center}
+    .top-bar .brand{font-size:20px;font-weight:800;color:#fff;letter-spacing:3px;text-transform:uppercase;margin-bottom:6px}
+    .ticker{overflow:hidden;white-space:nowrap;background:#c62828;padding-bottom:8px}
+    .ticker-track{display:inline-block;animation:scroll-left 30s linear infinite;font-size:11px;font-weight:600;color:#ffcdd2;letter-spacing:1px;text-transform:uppercase;opacity:.95}
+    .ticker-track span{margin:0 28px}
+    @keyframes scroll-left{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    /* Byline */
+    .byline{max-width:720px;margin:0 auto;padding:16px 20px 6px;display:flex;align-items:center;gap:10px;font-size:13px;color:#555}
+    .byline .author{font-weight:700;color:#111}
+    .byline .sep{color:#ccc}
+    .byline .date-txt{color:#888}
+
+    /* ===== SEÇÃO HERO (fundo branco) ===== */
+    .hero{max-width:760px;margin:0 auto;padding:20px 20px 8px;text-align:center}
+    .hero .eyebrow{display:inline-block;background:#c62828;color:#fff;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:4px;margin-bottom:16px}
+    .hero h1{font-size:28px;font-weight:900;color:#111;line-height:1.25;margin-bottom:16px;letter-spacing:-.3px}
+    .hero h1 em{color:#c62828;font-style:normal}
+    .hero .sub{font-size:16px;font-weight:600;color:#444;line-height:1.55;margin-bottom:10px}
+    .hero .sub span{display:block;padding:2px 0}
+    .hero .intro{font-size:14px;color:#555;line-height:1.6;font-style:italic;max-width:600px;margin:0 auto 4px}
+
+    /* Vídeo */
+    .video-section{display:flex;justify-content:center;padding:12px 20px 6px}
+    .video-container{width:100%;max-width:420px}
+
+    /* Aviso abaixo do vídeo */
+    .video-notice{max-width:420px;margin:6px auto 24px;text-align:center;font-size:13px;font-weight:600;color:#555;padding:0 20px}
+
+    /* ===== DOBRA 2 — FUNDO VERMELHO (pós-pitch, revelado com delay) ===== */
+    /* Barra de escassez */
+    .scarcity-bar{background:#c62828;color:#fff;text-align:center;padding:14px 20px}
+    .scarcity-bar p{font-size:14px;font-weight:700;line-height:1.5;max-width:600px;margin:0 auto}
+    .scarcity-bar strong{font-size:16px}
+
+    /* ===== DOBRA 3 — FUNDO BRANCO (garantia + CTA) ===== */
+    .guarantee-fold{background:#fff;padding:48px 20px}
+    .guarantee-inner{max-width:760px;margin:0 auto;display:flex;align-items:flex-start;gap:32px}
+    .guarantee-seal{flex-shrink:0;width:140px;height:140px}
+    .guarantee-text h2{font-size:22px;font-weight:800;color:#111;margin-bottom:10px;line-height:1.3}
+    .guarantee-text p{font-size:15px;color:#444;line-height:1.65;margin-bottom:12px}
+    .guarantee-text p:last-child{margin-bottom:0}
+
+    /* CTA */
+    .cta-wrap{text-align:center;padding:32px 20px 8px}
+    .btn-cart{display:inline-block;background:linear-gradient(180deg,#2ecc71 0%,#27ae60 100%);color:#fff;font-size:18px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;padding:20px 36px;border-radius:14px;text-decoration:none;box-shadow:0 6px 22px rgba(39,174,96,.35);transition:transform .2s,box-shadow .2s;line-height:1.3;max-width:520px;width:100%;box-sizing:border-box}
+    .btn-cart:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(39,174,96,.45)}
+    .btn-cart:active{transform:translateY(0)}
+    .cta-trust{font-size:13px;color:#666;margin-top:10px;font-weight:600;letter-spacing:.3px}
+
+    /* ===== DOBRA 4 — FUNDO VERMELHO (depoimentos) ===== */
+    .testimonials-fold{background:#c62828;padding:56px 20px}
+    .testimonials-fold .fold-title{font-size:26px;font-weight:800;color:#fff;text-align:center;margin-bottom:36px;line-height:1.3;max-width:680px;margin-left:auto;margin-right:auto}
+    .testimonials-grid{max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+    .testimonial-card{background:#fff;border-radius:14px;padding:24px 28px;position:relative}
+    .testimonial-card::before{content:"🟢";position:absolute;top:20px;left:20px;font-size:14px;line-height:1}
+    .testimonial-name{font-size:15px;font-weight:700;color:#111;margin-bottom:8px;padding-left:24px}
+    .testimonial-text{font-size:15px;color:#333;line-height:1.65;font-style:italic;padding-left:24px}
+
+    /* ===== DOBRA 5 — FUNDO BRANCO (CTA repetido + comentários) ===== */
+    /* Comentários Facebook style */
+    .comments{background:#fff;padding:40px 20px 56px;font-family:"Segoe UI","Segoe UI Historic",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}
+    .comments-inner{max-width:760px;margin:0 auto}
+    .comments-header{font-size:24px;font-weight:700;color:#1c1e21;margin-bottom:18px;letter-spacing:-.3px}
+    .comments-list{border:1px solid #dddfe2;border-radius:14px;padding:20px 24px;background:#fff}
+    .comment{display:flex;gap:12px;padding:10px 0;align-items:flex-start}
+    .comment+.comment{border-top:1px solid #f0f2f5}
+    .comment.is-reply{margin-left:52px}
+    .avatar{width:50px;height:50px;border-radius:50%;object-fit:cover;flex-shrink:0;background:#e4e6eb}
+    .comment-body{flex:1;min-width:0;position:relative}
+    .comment-bubble{background:#f0f2f5;border-radius:18px;padding:10px 22px 16px;display:block;margin-bottom:8px;position:relative}
+    .comment-name{font-size:15px;font-weight:700;color:#385898;margin-bottom:3px;line-height:1.3}
+    .comment-text{font-size:15px;color:#1c1e21;line-height:1.45;word-wrap:break-word;word-break:break-word}
+    .comment-meta{display:flex;align-items:center;gap:8px;font-size:13px;color:#65676b;padding:0 22px}
+    .comment-meta .act{cursor:pointer;font-weight:600}
+    .comment-meta .act:hover{text-decoration:underline}
+    .comment-meta .dot{color:#65676b;font-weight:700}
+    .comment-reactions{position:absolute;right:18px;bottom:-4px;display:inline-flex;align-items:center;background:#fff;border:1px solid #dddfe2;border-radius:14px;padding:2px 8px 2px 3px;font-size:13px;color:#65676b;box-shadow:0 1px 2px rgba(0,0,0,.1);z-index:2}
+    .comment-reactions .emoji{font-size:11px;line-height:1;display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;border:1.5px solid #fff}
+    .comment-reactions .emoji.like{background:linear-gradient(180deg,#2e89ff 0%,#0866ff 100%);color:#fff}
+    .comment-reactions .emoji.like svg{width:10px;height:10px;fill:#fff}
+    .comment-reactions .emoji.heart{background:linear-gradient(180deg,#ff7384 0%,#f33e58 100%);color:#fff;margin-left:-6px}
+    .comment-reactions .count{margin-left:5px}
+
+    /* ===== DOBRA 6 — FUNDO VERMELHO (garantia + CTA final) ===== */
+    .guarantee-fold-red{background:#c62828;padding:56px 20px}
+    .guarantee-fold-red .guarantee-inner{max-width:760px;margin:0 auto;display:flex;align-items:flex-start;gap:32px}
+    .guarantee-fold-red .guarantee-text h2{color:#fff}
+    .guarantee-fold-red .guarantee-text p{color:#ffcdd2}
+
+    /* Footer */
+    .site-footer{background:#111;border-top:1px solid #333;padding:28px 20px;text-align:center}
+    .site-footer .links{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;margin-bottom:12px;font-size:13px}
+    .site-footer .links a{color:#aaa;text-decoration:none}
+    .site-footer .links a:hover{color:#fff;text-decoration:underline}
+    .site-footer .copy{font-size:12px;color:#666}
+
+    /* Post-pitch reveal */
+    .post-pitch{opacity:0;transition:opacity .5s ease}
+    .post-pitch.is-visible{opacity:1}
+
+    /* ===== RESPONSIVO MOBILE ===== */
+    @media(max-width:640px){
+      .top-bar .brand{font-size:17px;letter-spacing:2px}
+      .hero h1{font-size:20px}
+      .hero .sub{font-size:14px}
+      .guarantee-inner,.guarantee-fold-red .guarantee-inner{flex-direction:column;align-items:center;text-align:center;gap:20px}
+      .guarantee-seal{width:110px;height:110px}
+      .btn-cart{font-size:15px;padding:18px 20px}
+      .comments{padding:28px 12px 40px}
+      .comments-list{padding:14px 14px;border-radius:12px}
+      .avatar{width:42px;height:42px}
+      .comment.is-reply{margin-left:30px}
+      .comment-bubble{padding:10px 16px 16px}
+      .comment-meta{padding:0 16px}
+      .comment-text{font-size:13.5px}
+      .testimonials-fold .fold-title{font-size:20px}
+      .testimonial-card{padding:18px 20px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===================================================
+       TOP BAR
+       =================================================== -->
+  <div class="top-bar fold-white">
+    <div class="brand">Santé &amp; Bien-Être</div>
+  </div>
+  <div class="ticker">
+    <div class="ticker-track">
+      <span>Mises à jour quotidiennes sur la santé féminine</span>
+      <span>Mises à jour quotidiennes sur la santé féminine</span>
+      <span>Mises à jour quotidiennes sur la santé féminine</span>
+      <span>Mises à jour quotidiennes sur la santé féminine</span>
+      <span>Mises à jour quotidiennes sur la santé féminine</span>
+      <span>Mises à jour quotidiennes sur la santé féminine</span>
+    </div>
+  </div>
+
+  <!-- Byline -->
+  <div class="byline fold-white">
+    <span class="author">Dr. Philippe Leclerc</span>
+    <span class="sep">•</span>
+    <span class="date-txt" id="date-display">Mis à jour aujourd'hui</span>
+  </div>
+
+  <!-- ===========================================================
+       DOBRA 1 — FUNDO BRANCO
+       SEÇÃO 1 — SEMPRE VISÍVEL: headline + vídeo
+       =========================================================== -->
+  <section class="fold-white">
+
+    <!-- Hero copy -->
+    <div class="hero">
+      <span class="eyebrow">ATTENTION MESDAMES DE PLUS DE 35 ANS :</span>
+      <h1>Des Chercheurs de l'Institut Pasteur Ont Découvert une <em>« Astuce Maison de 2 Minutes »</em> Qui Fait Fondre Jusqu'à 16 Kilos chez des Femmes Qui Avaient Déjà Abandonné Leur Propre Corps</h1>
+      <div class="sub">
+        <span>Sans supprimer les glucides.</span>
+        <span>Sans avoir faim.</span>
+        <span>Sans salle de sport.</span>
+        <span>Sans injections hors de prix à 300 euros par mois.</span>
+      </div>
+      <p class="intro">Regarde la vidéo ci-dessous jusqu'à la fin pour découvrir comment appliquer cette astuce dès cette semaine dans ta cuisine — avant que l'industrie pharmaceutique n'arrive à faire retirer cette présentation.</p>
+    </div>
+
+    <!-- Vídeo VTurb -->
+    <!-- TODO: substituir vid-PLACEHOLDER pelo ID real do A/B test VTurb quando o teste for finalizado -->
+    <div class="video-section">
+      <div class="video-container">
+        <vturb-smartplayer id="vid-PLACEHOLDER" style="display:block;margin:0 auto;width:100%"></vturb-smartplayer>
+        <script type="text/javascript">
+          var s=document.createElement("script");
+          s.src="https://scripts.converteai.net/00c3b583-8874-4e64-a32e-65f6dd9ba521/ab-test/vid-PLACEHOLDER/player.js";
+          s.async=true;
+          document.head.appendChild(s);
+        </script>
+      </div>
+    </div>
+
+    <!-- Aviso abaixo do vídeo (sempre visível) -->
+    <p class="video-notice">⚠️ Important : laisse le son activé et regarde jusqu'à la fin. Quand le bouton apparaîtra sous la vidéo, tu sauras exactement quelle est la prochaine étape.</p>
+
+  </section>
+
+  <!-- ===========================================================
+       SEÇÃO 2 — POST-PITCH (revelado com delay)
+       hidden via atributo HTML + JS remove hidden + transition opacity
+       =========================================================== -->
+  <div class="post-pitch" id="post-pitch" hidden>
+
+    <!-- ===================================================
+         DOBRA 2 — FUNDO VERMELHO: barra de escassez
+         =================================================== -->
+    <div class="scarcity-bar">
+      <p>⚠️ <strong>ATTENTION :</strong> Il ne reste plus que <strong>[43] des 50 places</strong> au prix promotionnel d'aujourd'hui. Ensuite, le prix repassera à <strong>451 €</strong>.</p>
+    </div>
+
+    <!-- ===================================================
+         DOBRA 3 — FUNDO BRANCO: garantia + CTA principal
+         =================================================== -->
+    <div class="guarantee-fold">
+      <div class="guarantee-inner">
+        <!-- Selo SVG 90 dias -->
+        <svg class="guarantee-seal" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg" aria-label="Garantie 90 jours">
+          <circle cx="70" cy="70" r="66" fill="#27ae60"/>
+          <circle cx="70" cy="70" r="58" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="4 3"/>
+          <text x="70" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="13" fill="#fff" text-anchor="middle">SATISFACTION</text>
+          <text x="70" y="80" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="34" fill="#fff" text-anchor="middle">90</text>
+          <text x="70" y="98" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="13" fill="#fff" text-anchor="middle">JOURS</text>
+          <text x="70" y="115" font-family="Arial,sans-serif" font-weight="700" font-size="9" fill="#fff" text-anchor="middle">GARANTIE</text>
+        </svg>
+        <div class="guarantee-text">
+          <h2>🛡️ GARANTIE BLINDÉE DE 90 JOURS</h2>
+          <p><strong>Tu ne prends aucun risque.</strong></p>
+          <p>Applique le protocole pendant 90 jours. Vois la balance descendre. Vois ces vêtements que tu avais mis de côté te revenir. Vois la faim disparaître.</p>
+          <p>Si, pour une raison ou pour une autre, tu trouves que le Mince Pour la Vie ne fonctionne pas pour toi, il te suffit d'envoyer un e-mail et nous te remboursons chaque centime. Sans questions. Sans paperasse. Sans petites lignes en bas du contrat.</p>
+          <p><strong>Ta confiance est plus importante que notre argent.</strong></p>
+        </div>
+      </div>
+
+      <!-- Botão de compra principal -->
+      <!-- TODO: substituir href="#" pelo link real do checkout Digistore24 quando disponível -->
+      <div class="cta-wrap">
+        <a class="btn-cart" href="#" id="btn-cta-main">
+          🟢 OUI, JE VEUX LE MINCE POUR LA VIE POUR SEULEMENT 19 €
+        </a>
+        <p class="cta-trust">🔒 Paiement 100 % sécurisé · Accès immédiat · Garantie de 90 jours</p>
+      </div>
+    </div>
+
+    <!-- ===================================================
+         DOBRA 4 — FUNDO VERMELHO: depoimentos
+         =================================================== -->
+    <div class="testimonials-fold">
+      <h2 class="fold-title">Des femmes qui ont retrouvé leur corps (et leur vie) avec le Mince Pour la Vie :</h2>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card">
+          <p class="testimonial-name">Marie</p>
+          <p class="testimonial-text">« J'ai essayé de maigrir pendant 8 ans. Huit ans de régimes, de salle de sport, de shakes, de nutritionnistes. Rien n'a duré plus de 3 semaines. En 11 semaines avec le Mince Pour la Vie, j'ai perdu 17 kilos. Mon mari m'a dit qu'il revoyait la femme qu'il avait rencontrée il y a 15 ans. Et cette fois-ci, je sais que ça ne reviendra pas. »</p>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-name">Sylvie</p>
+          <p class="testimonial-text">« Ménopause, thyroïde lente, deux médecins qui me disaient qu'il était presque impossible de maigrir dans ma situation. En 3 mois, j'ai perdu 14 kilos. Mon médecin m'a demandé ce que je faisais. Je lui ai répondu : je contrôle une hormone. Il n'a pas su quoi me répondre. »</p>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-name">Camille</p>
+          <p class="testimonial-text">« Je m'étais déjà fait opérer d'une chirurgie bariatrique et j'avais tout repris. Je pensais que mon corps n'arrivait tout simplement plus à maigrir. 19 kilos en 14 semaines. Sans chirurgie. Sans médicament. Sans souffrance. J'ai enfin compris ce qui n'allait pas. »</p>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-name">Marie-Claire</p>
+          <p class="testimonial-text">« J'ai perdu 16 kilos en 10 semaines en mangeant du pain et du fromage au petit-déjeuner tous les jours. Personne dans ma famille n'y croit encore aujourd'hui. »</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===================================================
+         DOBRA 5 — FUNDO BRANCO: comentários Facebook-style
+         (bloco movido para antes do footer via JS após reveal)
+         =================================================== -->
+    <section class="comments" id="comments-block">
+      <div class="comments-inner">
+        <div class="comments-header">2 847 commentaires</div>
+        <div class="comments-list">
+
+          <div class="comment">
+            <img class="avatar" src="/vsl/avatars/01.jpg" alt="Marie Dupont" loading="lazy" width="50" height="50">
+            <div class="comment-body">
+              <div class="comment-bubble">
+                <div class="comment-name">Marie Dupont</div>
+                <div class="comment-text">J'ai regardé cette vidéo avec le plus grand scepticisme, mais ce Dr. Leclerc explique vraiment quelque chose que personne d'autre n'avait jamais dit. C'est comme si enfin quelqu'un comprenait pourquoi mon corps résistait autant !</div>
+                <div class="comment-reactions"><span class="emoji like"><svg viewBox="0 0 24 24"><path d="M9 21h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2zM1 9h4v12H1z"/></svg></span><span class="emoji heart">❤</span><span class="count">64</span></div>
+              </div>
+              <div class="comment-meta"><span class="act">J'aime</span><span class="dot">·</span><span class="act">Répondre</span><span class="dot">·</span><span class="time">3 h</span></div>
+            </div>
+          </div>
+
+          <div class="comment is-reply">
+            <img class="avatar" src="/vsl/avatars/02.jpg" alt="Isabelle Renard" loading="lazy" width="50" height="50">
+            <div class="comment-body">
+              <div class="comment-bubble">
+                <div class="comment-name">Isabelle Renard</div>
+                <div class="comment-text">Pareil pour moi ! On dirait qu'on nous cachait cette information depuis des années. Merci Dr. Leclerc 👏</div>
+                <div class="comment-reactions"><span class="emoji like"><svg viewBox="0 0 24 24"><path d="M9 21h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2zM1 9h4v12H1z"/></svg></span><span class="emoji heart">❤</span><span class="count">41</span></div>
+              </div>
+              <div class="comment-meta"><span class="act">J'aime</span><span class="dot">·</span><span class="act">Répondre</span><span class="dot">·</span><span class="time">2 h</span></div>
+            </div>
+          </div>
+
+          <div class="comment">
+            <img class="avatar" src="/vsl/avatars/03.jpg" alt="Chantal Moreau" loading="lazy" width="50" height="50">
+            <div class="comment-body">
+              <div class="comment-bubble">
+                <div class="comment-name">Chantal Moreau</div>
+                <div class="comment-text">Trois semaines et j'ai déjà perdu 5 kilos en mangeant normalement. Mon médecin n'en revenait pas aux dernières analyses. Il m'a demandé ce que j'avais changé 😊</div>
+                <div class="comment-reactions"><span class="emoji like"><svg viewBox="0 0 24 24"><path d="M9 21h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2zM1 9h4v12H1z"/></svg></span><span class="emoji heart">❤</span><span class="count">88</span></div>
+              </div>
+              <div class="comment-meta"><span class="act">J'aime</span><span class="dot">·</span><span class="act">Répondre</span><span class="dot">·</span><span class="time">2 h</span></div>
+            </div>
+          </div>
+
+          <div class="comment">
+            <img class="avatar" src="/vsl/avatars/04.jpg" alt="Nathalie Lefebvre" loading="lazy" width="50" height="50">
+            <div class="comment-body">
+              <div class="comment-bubble">
+                <div class="comment-name">Nathalie Lefebvre</div>
+                <div class="comment-text">C'est vrai ou c'est du marketing ? Je suis toujours méfiante avec ces vidéos...</div>
+                <div class="comment-reactions"><span class="emoji like"><svg viewBox="0 0 24 24"><path d="M9 21h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2zM1 9h4v12H1z"/></svg></span><span class="count">18</span></div>
+              </div>
+              <div class="comment-meta"><span class="act">J'aime</span><span class="dot">·</span><span class="act">Répondre</span><span class="dot">·</span><span class="time">1 h</span></div>
+            </div>
+          </div>
+
+          <div class="comment is-reply">
+            <img class="avatar" src="/vsl/avatars/05.jpg" alt="Sophie Blanchard" loading="lazy" width="50" height="50">
+            <div class="comment-body">
+              <div class="comment-bubble">
+                <div class="comment-name">Sophie Blanchard</div>
+                <div class="comment-text">Nathalie, j'étais exactement comme toi. J'ai essayé quand même et franchement… 11 kilos en 2 mois. Mon entourage ne me reconnaît plus. Essaye !</div>
+                <div class="comment-reactions"><span class="emoji like"><svg viewBox="0 0 24 24"><path d="M9 21h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2zM1 9h4v12H1z"/></svg></span><span class="emoji heart">❤</span><span class="count">73</span></div>
+              </div>
+              <div class="comment-meta"><span class="act">J'aime</span><span class="dot">·</span><span class="act">Répondre</span><span class="dot">·</span><span class="time">58 min</span></div>
+            </div>
+          </div>
+
+          <div class="comment">
+            <img class="avatar" src="/vsl/avatars/06.jpg" alt="Véronique Simon" loading="lazy" width="50" height="50">
+            <div class="comment-body">
+              <div class="comment-bubble">
+                <div class="comment-name">Véronique Simon</div>
+                <div class="comment-text">Je souffrais de ménopause depuis 3 ans et les kilos ne voulaient plus partir. En 6 semaines j'ai perdu 8 kilos et mes bouffées de chaleur ont aussi diminué. Je n'en reviens toujours pas.</div>
+                <div class="comment-reactions"><span class="emoji like"><svg viewBox="0 0 24 24"><path d="M9 21h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2zM1 9h4v12H1z"/></svg></span><span class="emoji heart">❤</span><span class="count">97</span></div>
+              </div>
+              <div class="comment-meta"><span class="act">J'aime</span><span class="dot">·</span><span class="act">Répondre</span><span class="dot">·</span><span class="time">45 min</span></div>
+            </div>
+          </div>
+
+          <div class="comment">
+            <img class="avatar" src="/vsl/avatars/07.jpg" alt="Aurélie Martin" loading="lazy" width="50" height="50">
+            <div class="comment-body">
+              <div class="comment-bubble">
+                <div class="comment-name">Aurélie Martin</div>
+                <div class="comment-text">Mon mari pensait que j'avais arrêté de manger. En fait j'ai juste arrêté d'avoir faim. La différence c'est énorme quand ça vient de l'intérieur 😂</div>
+                <div class="comment-reactions"><span class="emoji like"><svg viewBox="0 0 24 24"><path d="M9 21h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2zM1 9h4v12H1z"/></svg></span><span class="emoji heart">❤</span><span class="count">55</span></div>
+              </div>
+              <div class="comment-meta"><span class="act">J'aime</span><span class="dot">·</span><span class="act">Répondre</span><span class="dot">·</span><span class="time">38 min</span></div>
+            </div>
+          </div>
+
+          <div class="comment">
+            <img class="avatar" src="/vsl/avatars/08.jpg" alt="Patricia Girard" loading="lazy" width="50" height="50">
+            <div class="comment-body">
+              <div class="comment-bubble">
+                <div class="comment-name">Patricia Girard</div>
+                <div class="comment-text">J'avais une résistance à l'insuline diagnostiquée depuis 4 ans. Aucun médecin ne m'avait parlé de ça. Maintenant mes glycémies sont normales et j'ai perdu 13 kilos. Merci, merci, merci !</div>
+                <div class="comment-reactions"><span class="emoji like"><svg viewBox="0 0 24 24"><path d="M9 21h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2zM1 9h4v12H1z"/></svg></span><span class="emoji heart">❤</span><span class="count">112</span></div>
+              </div>
+              <div class="comment-meta"><span class="act">J'aime</span><span class="dot">·</span><span class="act">Répondre</span><span class="dot">·</span><span class="time">30 min</span></div>
+            </div>
+          </div>
+
+          <div class="comment">
+            <img class="avatar" src="/vsl/avatars/09.jpg" alt="Corinne Petit" loading="lazy" width="50" height="50">
+            <div class="comment-body">
+              <div class="comment-bubble">
+                <div class="comment-name">Corinne Petit</div>
+                <div class="comment-text">J'avais honte de me regarder dans le miroir. Aujourd'hui je souris quand je m'habille le matin. C'est bête mais c'est ça qui a tout changé pour moi. ❤️</div>
+                <div class="comment-reactions"><span class="emoji like"><svg viewBox="0 0 24 24"><path d="M9 21h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2zM1 9h4v12H1z"/></svg></span><span class="emoji heart">❤</span><span class="count">143</span></div>
+              </div>
+              <div class="comment-meta"><span class="act">J'aime</span><span class="dot">·</span><span class="act">Répondre</span><span class="dot">·</span><span class="time">22 min</span></div>
+            </div>
+          </div>
+
+          <div class="comment is-reply">
+            <img class="avatar" src="/vsl/avatars/10.jpg" alt="Danielle Roux" loading="lazy" width="50" height="50">
+            <div class="comment-body">
+              <div class="comment-bubble">
+                <div class="comment-name">Danielle Roux</div>
+                <div class="comment-text">Corinne, je comprends tellement. On ne réalise pas à quel point la confiance en soi revient en même temps que la silhouette. Tu n'es pas seule ❤️</div>
+                <div class="comment-reactions"><span class="emoji like"><svg viewBox="0 0 24 24"><path d="M9 21h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2zM1 9h4v12H1z"/></svg></span><span class="emoji heart">❤</span><span class="count">67</span></div>
+              </div>
+              <div class="comment-meta"><span class="act">J'aime</span><span class="dot">·</span><span class="act">Répondre</span><span class="dot">·</span><span class="time">15 min</span></div>
+            </div>
+          </div>
+
+          <div class="comment">
+            <img class="avatar" src="/vsl/avatars/11.jpg" alt="Brigitte Lambert" loading="lazy" width="50" height="50">
+            <div class="comment-body">
+              <div class="comment-bubble">
+                <div class="comment-name">Brigitte Lambert</div>
+                <div class="comment-text">À 54 ans, je pensais que mon métabolisme était définitivement cassé. 7 kilos en 5 semaines prouvent le contraire. Mon corps avait juste besoin du bon signal.</div>
+                <div class="comment-reactions"><span class="emoji like"><svg viewBox="0 0 24 24"><path d="M9 21h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2zM1 9h4v12H1z"/></svg></span><span class="emoji heart">❤</span><span class="count">79</span></div>
+              </div>
+              <div class="comment-meta"><span class="act">J'aime</span><span class="dot">·</span><span class="act">Répondre</span><span class="dot">·</span><span class="time">10 min</span></div>
+            </div>
+          </div>
+
+          <div class="comment">
+            <img class="avatar" src="/vsl/avatars/12.jpg" alt="Françoise Dubois" loading="lazy" width="50" height="50">
+            <div class="comment-body">
+              <div class="comment-bubble">
+                <div class="comment-name">Françoise Dubois</div>
+                <div class="comment-text">Toute ma famille me demande mon secret. Je leur dis que j'ai enfin compris ce que mon corps voulait vraiment 😄</div>
+                <div class="comment-reactions"><span class="emoji like"><svg viewBox="0 0 24 24"><path d="M9 21h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2zM1 9h4v12H1z"/></svg></span><span class="emoji heart">❤</span><span class="count">58</span></div>
+              </div>
+              <div class="comment-meta"><span class="act">J'aime</span><span class="dot">·</span><span class="act">Répondre</span><span class="dot">·</span><span class="time">6 min</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================
+         DOBRA 6 — FUNDO VERMELHO: garantia repetida + CTA final
+         =================================================== -->
+    <div class="guarantee-fold-red">
+      <div class="guarantee-inner">
+        <svg class="guarantee-seal" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg" aria-label="Garantie 90 jours">
+          <circle cx="70" cy="70" r="66" fill="#fff"/>
+          <circle cx="70" cy="70" r="58" fill="none" stroke="#c62828" stroke-width="2" stroke-dasharray="4 3"/>
+          <text x="70" y="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="13" fill="#c62828" text-anchor="middle">SATISFACTION</text>
+          <text x="70" y="80" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="34" fill="#c62828" text-anchor="middle">90</text>
+          <text x="70" y="98" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="13" fill="#c62828" text-anchor="middle">JOURS</text>
+          <text x="70" y="115" font-family="Arial,sans-serif" font-weight="700" font-size="9" fill="#c62828" text-anchor="middle">GARANTIE</text>
+        </svg>
+        <div class="guarantee-text">
+          <h2>🛡️ GARANTIE BLINDÉE DE 90 JOURS</h2>
+          <p><strong>Tu ne prends aucun risque.</strong></p>
+          <p>Applique le protocole pendant 90 jours. Vois la balance descendre. Vois ces vêtements que tu avais mis de côté te revenir. Vois la faim disparaître.</p>
+          <p>Si, pour une raison ou pour une autre, tu trouves que le Mince Pour la Vie ne fonctionne pas pour toi, il te suffit d'envoyer un e-mail et nous te remboursons chaque centime. Sans questions. Sans paperasse. Sans petites lignes en bas du contrat.</p>
+          <p><strong>Ta confiance est plus importante que notre argent.</strong></p>
+        </div>
+      </div>
+      <!-- TODO: substituir href="#" pelo link real do checkout Digistore24 quando disponível -->
+      <div class="cta-wrap">
+        <a class="btn-cart" href="#" id="btn-cta-final">
+          🟢 OUI, JE VEUX LE MINCE POUR LA VIE POUR SEULEMENT 19 €
+        </a>
+        <p class="cta-trust" style="color:#ffcdd2">🔒 Paiement 100 % sécurisé · Accès immédiat · Garantie de 90 jours</p>
+      </div>
+    </div>
+
+  </div>
+  <!-- /post-pitch -->
+
+  <!-- Footer (sempre visível) -->
+  <footer class="site-footer" id="site-footer">
+    <div class="links">
+      <a href="/privacy-policy/">Politique de confidentialité</a>
+      <a href="/terms-of-use/">Conditions d'utilisation</a>
+      <a href="/refund-policy/">Politique de remboursement</a>
+      <a href="/contact/">Contact</a>
+      <a href="/imprint/">Mentions légales</a>
+    </div>
+    <div class="copy">&copy; 2026 Mince Pour la Vie. Tous droits réservés.</div>
+  </footer>
+
+  <!-- Data dinâmica -->
+  <script>
+    (function(){
+      var n=new Date();
+      var pad=function(x){return x.toString().padStart(2,'0')};
+      var el=document.getElementById('date-display');
+      if(el) el.textContent='Mis à jour le '+pad(n.getDate())+'.'+pad(n.getMonth()+1)+'.'+n.getFullYear();
+    })();
+  </script>
+
+  <!-- ================================================================
+       PITCH REVEAL — 4 mecanismos em paralelo (idempotente)
+       ATENÇÃO: CTA_SELECTORS restrito ao shadow DOM do player VTurb
+       para NÃO casar com #btn-cta-main / #btn-cta-final do post-pitch
+       e evitar revelação prematura (bug já ocorreu em projetos anteriores).
+       ================================================================ -->
+  <script>
+    (function(){
+      // Teto de segurança: 35 minutos
+      var SAFETY_MAX_DELAY_MS = 35 * 60 * 1000;
+
+      // ATENÇÃO: seletores propositalmente restritos ao contexto do player VTurb.
+      // NÃO usar seletores globais como '.btn-cta' ou 'a[href*="#"]' — casariam
+      // com os botões do post-pitch e revelariam antes do pitch (bug crítico).
+      var VTURB_CTA_SELECTORS = [
+        '[data-action="cta"]',
+        '[class*="smartplayer"][class*="cta"]',
+        '[class*="vturb"][class*="cta"]',
+        '[id*="smartplayer"][class*="btn"]',
+        'button[class*="offer" i]',
+        'a[href*="checkout"]',
+        'a[href*="pay."]',
+        'a[href*="digistore"]',
+        'a[href*="hotmart"]',
+        'a[href*="kiwify"]',
+        'a[href*="eduzz"]',
+        'a[href*="centerpag"]'
+      ].join(',');
+
+      // Eventos do VTurb / Smartplayer
+      var EVENT_NAMES = [
+        'vturb:cta','vturb:pitch','vturb:offer','vturb:reveal','vturb:show_cta',
+        'smartplayer:cta','smartplayer:pitch','smartplayer:offer','smartplayer:show_cta',
+        'cta:show','pitch:show','offer:show','show_cta','show_pitch'
+      ];
+
+      var revealed = false;
+      var observer = null;
+      var pollInt  = null;
+      var attachInt= null;
+
+      function cleanup(){
+        try{ if(observer)  observer.disconnect();     }catch(_){}
+        try{ if(pollInt)   clearInterval(pollInt);    }catch(_){}
+        try{ if(attachInt) clearInterval(attachInt);  }catch(_){}
+        EVENT_NAMES.forEach(function(n){
+          try{ window.removeEventListener(n, onEvent);   }catch(_){}
+          try{ document.removeEventListener(n, onEvent); }catch(_){}
+        });
+      }
+
+      function revealPostPitch(source){
+        if(revealed) return;
+        revealed = true;
+        try{ console.info('[mince-pitch] revealed via', source); }catch(_){}
+
+        var postPitch = document.getElementById('post-pitch');
+        if(!postPitch) return cleanup();
+
+        postPitch.hidden = false;
+        void postPitch.offsetWidth; // força reflow para transição CSS
+        postPitch.classList.add('is-visible');
+        cleanup();
+      }
+
+      // ===== Mecanismo 1: eventos do VTurb =====
+      function onEvent(e){ revealPostPitch('event:'+e.type); }
+      EVENT_NAMES.forEach(function(n){
+        window.addEventListener(n, onEvent);
+        document.addEventListener(n, onEvent);
+      });
+
+      // ===== Mecanismo 2: MutationObserver no shadow DOM do player =====
+      // Observa APENAS dentro do elemento vturb-smartplayer (não o DOM global)
+      function checkPlayerRoots(roots){
+        for(var i=0;i<roots.length;i++){
+          var r=roots[i];
+          if(r && r.querySelector && r.querySelector(VTURB_CTA_SELECTORS)) return true;
+        }
+        return false;
+      }
+      function observePlayer(player){
+        var roots=[player];
+        if(player.shadowRoot) roots.push(player.shadowRoot);
+        if(checkPlayerRoots(roots)) return revealPostPitch('mutation:initial');
+        observer=new MutationObserver(function(){
+          if(checkPlayerRoots(roots)) revealPostPitch('mutation');
+        });
+        roots.forEach(function(r){
+          try{ observer.observe(r,{childList:true,subtree:true}); }catch(_){}
+        });
+      }
+      function tryAttachObserver(){
+        // Seleciona pelo ID específico para garantir que é o player correto
+        var player=document.getElementById('vid-PLACEHOLDER');
+        if(!player) player=document.querySelector('vturb-smartplayer');
+        if(player){ observePlayer(player); return true; }
+        return false;
+      }
+      if(!tryAttachObserver()){
+        attachInt=setInterval(function(){
+          if(revealed||tryAttachObserver()) clearInterval(attachInt);
+        },500);
+      }
+
+      // ===== Mecanismo 3: polling RESTRITO ao shadow DOM do player =====
+      // Não usa document.querySelector global para evitar falsos positivos
+      pollInt=setInterval(function(){
+        if(revealed) return clearInterval(pollInt);
+        var player=document.getElementById('vid-PLACEHOLDER');
+        if(!player) player=document.querySelector('vturb-smartplayer');
+        if(!player) return;
+        var roots=[player];
+        if(player.shadowRoot) roots.push(player.shadowRoot);
+        if(checkPlayerRoots(roots)) revealPostPitch('poll');
+      },1500);
+
+      // ===== Mecanismo 4: teto de segurança =====
+      setTimeout(function(){ revealPostPitch('safety-timeout'); }, SAFETY_MAX_DELAY_MS);
+
+      // Debug manual no console: window.__revealPitch()
+      window.__revealPitch=function(){ revealPostPitch('manual'); };
+    })();
+  </script>
+
+  <!-- ================================================================
+       PIXEL UTMify
+       TODO: substituir PLACEHOLDER_PIXEL_UTMIFY pelo ID real
+             (task ClickUp "Criar pixel - mince-pour-la-vie" — Fischer)
+       ATENÇÃO: NÃO colocar este pixel em páginas white/safe (só em VSLs)
+       ================================================================ -->
+  <script>
+    window.pixelId="PLACEHOLDER_PIXEL_UTMIFY";/* TODO: substituir pelo ID UTMify real */
+    var _up=document.createElement("script");
+    _up.setAttribute("async","");
+    _up.setAttribute("defer","");
+    _up.setAttribute("src","https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+    document.head.appendChild(_up);
+  </script>
+
+  <!-- UTMify UTMs — preserva parâmetros de rastreamento -->
+  <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
+
+</body>
+</html>
